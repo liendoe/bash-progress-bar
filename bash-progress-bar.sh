@@ -1,5 +1,5 @@
 #!/bin/bash
-registers=3000
+registers=100
 total=100
 progress=1
 
@@ -18,6 +18,7 @@ do
     done
     bar="${bar} ]"
     #percentage=$(( $progress * 10))
+    percentage=$(( $progress * $total / $registers ))
     if [ $progress -eq $total ]; then
         rc="\n";
     fi
